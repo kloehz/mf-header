@@ -1,14 +1,14 @@
-import { Route } from 'react-router-dom';
-import { Router, Link } from "@reach/router"
+import { Link } from "@reach/router"
 
 export default function App() {
   return (
-    <Router>
-      <Link to={'user'}><h2>user</h2></Link>
-      <Link to={'body'}><h2 style={{ marginLeft: '20px' }}>body</h2></Link>
-    </Router>
+    <>
+      <Link path='user'>User</Link>
+      <Link path='body'>Home</Link>
+    </>
   );
 }
+
 
 // const App = () => {
 //   return (

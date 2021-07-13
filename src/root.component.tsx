@@ -1,5 +1,5 @@
-import { Route, BrowserRouter, Link } from 'react-router-dom';
-import styled, { css } from 'styled-components';
+import { Route, HashRouter, Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 const Container = styled.div`
   display: flex;
@@ -34,9 +34,9 @@ const StyledButton = styled.button`
 
 export default function Root(props) {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Route path="/" component={App}/>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

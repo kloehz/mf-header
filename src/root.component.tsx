@@ -1,21 +1,23 @@
-import { Route, BrowserRouter, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import { Router, Link } from "@reach/router"
 
-export default function Root(props) {
+export default function App() {
   return (
-    <BrowserRouter>
-      <Route path="/" component={App}/>
-    </BrowserRouter>
-  );
-}
-
-const App = () => {
-  return (
-    <div style={{
-      display: 'flex',
-      flexDirection: 'row',
-    }}>
+    <Router>
       <Link to={'user'}><h2>user</h2></Link>
-      <Link to={'body'}><h2 style={{marginLeft: '20px'}}>body</h2></Link>
-    </div>
+      <Link to={'body'}><h2 style={{ marginLeft: '20px' }}>body</h2></Link>
+    </Router>
   );
 }
+
+// const App = () => {
+//   return (
+//     <div style={{
+//       display: 'flex',
+//       flexDirection: 'row',
+//     }}>
+//       <Link to={'user'}><h2>user</h2></Link>
+//       <Link to={'body'}><h2 style={{marginLeft: '20px'}}>body</h2></Link>
+//     </div>
+//   );
+// }

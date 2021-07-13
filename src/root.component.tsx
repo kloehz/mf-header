@@ -1,10 +1,10 @@
-import { Route, HashRouter, Link } from 'react-router-dom';
+import { Route, BrowserRouter, Link } from 'react-router-dom';
 
 export default function Root(props) {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Route path="/" component={App}/>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

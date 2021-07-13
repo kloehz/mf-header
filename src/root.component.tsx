@@ -1,4 +1,36 @@
 import { Route, BrowserRouter, Link } from 'react-router-dom';
+import styled, { css } from 'styled-components';
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  min-height: 56px;
+  padding-left: 10px;
+`;
+
+const Test = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+`;
+
+
+const StyledButton = styled.button`
+  background-color: black;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  border: black;
+  color: white;
+  cursor: pointer;
+  font-size: 23px;
+  text-align: center;
+  &:hover {
+    filter: opacity(0.8);
+  }
+`;
+
 
 export default function Root(props) {
   return (
@@ -10,12 +42,9 @@ export default function Root(props) {
 
 const App = () => {
   return (
-    <div style={{
-      display: 'flex',
-      flexDirection: 'row',
-    }}>
-      <Link to={'user'}><h2>user</h2></Link>
-      <Link to={'body'}><h2 style={{marginLeft: '20px'}}>body</h2></Link>
-    </div>
+    <Container>
+      <Test to={'user'}><StyledButton>User</StyledButton></Test>
+      <Test to={'body'}><StyledButton>Body</StyledButton></Test>
+    </Container>
   );
 }

@@ -4,7 +4,7 @@ const singleSpaDefaults = require("webpack-config-single-spa-react-ts");
 module.exports = (webpackConfigEnv, argv) => {
   const defaultConfig = singleSpaDefaults({
     orgName: "fpay",
-    projectName: "header",
+    projectName: "navbar",
     webpackConfigEnv,
     argv,
   });
